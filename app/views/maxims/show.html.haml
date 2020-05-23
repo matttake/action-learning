@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @maxim.title
+%p
+  %strong Content:
+  = @maxim.content
+= link_to 'Edit', edit_maxim_path(@maxim)
+|
+= link_to 'Back', maxims_path
