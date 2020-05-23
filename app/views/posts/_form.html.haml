@@ -1,0 +1,47 @@
+.form__box.row
+  .form__box__element.col-12
+    %p タイトル
+    = form.text_field :title,class:"col-lg-6 col-12"
+  .form__box__element.col-12
+    %p TOP画像
+    = form.file_field :image,class:"form-control-file,col-12",id:"exampleFormControlFilel"
+  .form__box__element.col-12
+    %p 出版社
+    = form.text_field :publisher,class:"col-lg-6 col-12"
+  .form__box__element.col-12
+    %p 著者
+    = form.text_field :author,class:"col-lg-6 col-12"
+  .form__box__element.col-sm-6.col-12
+    %p ページ数
+    = form.number_field :page
+  .form__box__element.col-sm-6.col-12
+    %p 当たり
+    = form.select :hit,[["◎","◎"],["○","○"],["△","△"],["✕","✕"]]
+  .form__box__element.col-sm-6.col-12
+    %p 発行日
+    = form.date_select :issu, {use_month_numbers: true,start_year: 1900}
+  .form__box__element.col-sm-6.col-12
+    %p 読了日
+    = form.date_select :read,{use_month_numbers: true}
+
+      
+  .form__box__element.col-lg-6.col-12
+    %p 要約
+    = form.text_area :fact,size:"15x15",class:"col-12"
+  .form__box__element.col-lg-6.col-12
+    %p 気づき
+    = form.text_area :perceive,size:"15x15",class:"col-12"
+  .form__box__element.col-12
+    %p アクションプラン1
+    = form.text_field :action,class:"col-lg-6 col-12"
+  .form__box__element.col-12
+    %p アクションプラン2
+    = form.text_field :action2,class:"col-lg-6 col-12"
+  .form__box__element.col-12
+    %p アクションプラン3
+    = form.text_field :action3,class:"col-lg-6 col-12"
+  .form__box__element.col-12
+    %p アクションプランを表示する
+    = form.check_box :indication,{},"true","false"
+    
+  = form.submit "SEND",class: "col-12"

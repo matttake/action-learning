@@ -1,0 +1,10 @@
+.index__warapper__container.row
+  .index__warapper__container__image.col-sm-2.col-12
+    -if post.image.attached?
+      = link_to image_tag(post.image,class:"img-fluid"), "/posts/#{post.id}"
+
+  .index__warapper__container__plan.col-sm-10.col-12
+    %ul.list-group
+      %li.list-group-item.mark= post.action
+      %li.list-group-item.mark= post.action2
+      %li.list-group-item.mark= post.action3
