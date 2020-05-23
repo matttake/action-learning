@@ -51,4 +51,4 @@ production:
   <<: *default
   database: action-learning_production
   username: action-learning
-  password: <%= ENV['ACTION-LEARNING_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
