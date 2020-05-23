@@ -1,0 +1,61 @@
+.container-fluid
+  .show
+    %p 作品詳細
+    .show__top.row
+      .col-xl-2.col-lg-3.col-md-4.col-12
+        -if @posts.image.attached?
+          = image_tag @posts.image
+      .col-xl-10.col-lg-9.col-md-8.col-12
+        .show__top__element
+          %p#table タイトル:
+          %p#date= @posts.title
+        %hr/
+        .show__top__element
+          %p#table 出版社:
+          %p#date= @posts.publisher
+        %hr/
+        .show__top__element
+          %p#table 著者:
+          %p#date= @posts.author
+        %hr/
+        .show__top__element
+          %p#table 発行日:
+          %p#date= @posts.issu
+        %hr/
+        .show__top__element
+          %p#table ページ数:
+          %p#date= @posts.page
+        %hr/
+        .show__top__element
+          %p#table 当たり度:
+          %p#date= @posts.hit
+        %hr/
+        .show__top__element
+          %p#table 読了日:
+          %p#date= @posts.read
+        %hr/
+  
+  
+    .show__main.row
+
+      .show__main__container.col-lg-6.col-12
+        %p 要約
+        %hr/
+        .show__main__container__form
+          %p= safe_join(@posts.fact.split("\n"),tag(:br))
+      .show__main__container.col-lg-6.col-12
+        %p 気づき
+        %hr/
+        .show__main__container__form
+          %p= safe_join(@posts.perceive.split("\n"),tag(:br))
+      .show__main__action.col-12
+        %p アクションプラン
+        %hr/
+        %ul.list-group
+          %li.list-group-item.mark= @posts.action
+          %li.list-group-item.mark= @posts.action2
+          %li.list-group-item.mark= @posts.action3
+
+      .show__main__edit
+        =link_to("Edit","/posts/#{@posts.id}/edit",  {class:"btn btn-link",role:"button"})
+  

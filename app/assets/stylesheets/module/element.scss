@@ -1,0 +1,44 @@
+@mixin header(){
+  height: 200px;
+  background-size: cover;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  position: relative;
+  top: 50px;
+}
+
+@mixin header-p {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+@mixin box {
+  position: relative;
+  top: 200px;
+  padding: 30px;
+}
+
+@mixin hr {
+  height: 5px;
+  border: 0;
+  box-shadow: 0 5px 5px -5px #8c8b8b inset;
+}
+
+@mixin mark {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-right: 3px solid #00b5ad;
+  border-bottom: 3px solid #00b5ad;
+  transform: rotate(-45deg);      
+}
+
+$bg-color:rgb(247,247,247);

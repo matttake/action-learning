@@ -1,0 +1,8 @@
+.list
+  %p 一覧
+  = form_with(url: posts_searches_path, local: true, method: :get, class: "search-form") do |form| 
+    .list__top.input-group
+      = form.text_field :keyword, placeholder: "search...", class: "form-control"
+      = form.submit "検索", class: "btn,btn-primary" 
+  = render "list"
+

@@ -1,0 +1,267 @@
+// HederSection
+.navbar{
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #1ebba3;
+}
+#user{
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.list-group-item{
+  height: 50px;
+}
+
+
+
+// LandingSetion
+.landing{
+  @include header;
+  padding: 0;
+  position: relative;
+  top: 0;
+  background-image: url("/images/top-image.jpeg");
+  height: 100vh;
+  p{
+    @include header-p;
+    bottom: 55%;
+    font-size: 18px;
+  }
+  &__btn{
+    @include header-p;
+    width: 350px;
+    bottom: 20%;
+    a{
+      margin-bottom: 30px;
+    }
+    .aa{
+      position: relative;
+      display: inline-block;
+      padding: 0.4em 1.6em;
+      font-size: 0.8em;
+      color: #868686;
+      text-decoration: none;
+      user-select: none;
+      background: $bg-color;
+      transition: 0.5s;
+    }
+    .aa:hover{
+      color: black;
+      background-image: linear-gradient(to right, #e9e9e9 0%, #c2c2c2 100%);
+    }
+    .aa::before{
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      content: "";
+    }
+  }
+}
+
+
+
+// IndexSetion
+
+.index{
+  @include header;
+  background-image: url("/images/index.jpeg");
+  background-position: center;
+  &__maxim{
+    padding: 50px 100px 0;
+    position: relative;
+    
+    >p{
+      text-align: center;
+      font-size: 12px;
+      padding-bottom: 30px;
+      transform-origin:center top;
+      animation:show 2.4s both
+    }    
+    @keyframes show {
+      0% {
+        // transform:translate(0,2em);
+        opacity:0;
+      }
+      50% {
+        text-shadow:0 0 0em;
+      }
+      100% {
+        transform:translate(0,0);
+        opacity:1;
+        text-shadow:none;
+      }
+    }
+  }
+  &__warapper{
+    @include box;
+    background-color: $bg-color;
+    padding-bottom: 0;
+    top: 50px;
+    &__container{
+      &__image{
+        height: 150px;
+        margin-bottom: 30px;
+        text-align: center;
+        .img-fluid{
+          height: 150px;   
+          width: 110px;
+          text-align: center;       
+        }
+      }
+      &__plan{        
+        margin-bottom: 30px;
+        .mark{
+          position: relative;
+        }
+        .mark::before{
+          @include mark; 
+        }
+      }
+    }
+  }
+}
+  
+  
+  // FormSetion
+  .form{
+    @include header;
+    background-image: url("/images/list2.jpeg");
+    >p{
+    @include header-p;
+  }
+  &__box{
+    @include box;
+    background-color:$bg-color;  
+    p{
+      margin-bottom: 5px;
+    }
+    &__element{
+      margin-bottom: 30px;
+    }
+  }
+  #errors{
+    margin:200px 200px 0;
+    padding-top: 20px;
+    text-align: center;
+    border: 2px solid red;
+  }
+}
+
+
+// ShowSetion
+.show{
+  @include header;
+  background-image: url("/images/show.jpeg");
+  >p{
+    @include header-p;
+  }
+  &__top{
+    @include box;
+    padding-top: 60px;
+    background-color: $bg-color;
+    text-align: center;
+    img{
+      width: 200px;
+      height: 290px;
+      margin-bottom: 30px;
+    }
+    &__element{
+      display: flex;
+      #date{
+        margin: 0 auto;
+      }
+      #table{
+        margin-bottom: 0;
+        padding-left: 20px;
+      }
+    }
+    hr{
+      @include hr;
+      margin: 0 50px 15px 160px;
+    }
+  }
+  &__main{
+    @include box;
+    background-color: $bg-color;
+    &__container{
+      margin-bottom: 30px;
+      p{
+        text-align: center;
+        margin-bottom: 4px;
+      }
+      hr{
+        @include hr;
+        margin: 0 250px 15px 250px;
+      }
+      &__form{
+        width: auto;
+        height: 400px;
+        border: 1px solid;
+        overflow: scroll;
+        word-wrap: break-word;
+      }
+    }
+    &__action{
+      margin: 50px 0 100px 0;
+      p{
+        text-align: center;
+        margin-bottom: 4px;
+      }
+      hr{
+        @include hr;
+        margin: 0 500px 15px 500px;
+      }
+        .mark{
+          position: relative;
+        }
+        .mark::before{
+          @include mark;
+        }
+    }
+  }
+}
+
+
+// ListSetion
+.list{
+  @include header;
+  background-position: center;
+  background-image: url("/images/list2.jpeg");
+  &__top{
+    width: 150px;
+    @include header-p;
+    input{
+      height: 30px;
+    }
+  }
+  p{
+    text-align: center;  
+    line-height: 200px;
+    margin: 0;
+  }
+  &__main{
+    padding: 50px 50px 0;
+    background-color:$bg-color;
+    &__card{
+      .img-fluid{
+        height: 290px;
+        width: 200px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+
+.create{
+  padding-top: 100px;
+  text-align: center;
+}
