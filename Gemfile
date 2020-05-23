@@ -62,3 +62,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "haml-rails"
+gem 'pry-rails'
+gem "font-awesome-sass"
+gem 'bootstrap', '~> 4.1.1'
+gem "jquery-rails"
+gem "jquery-ui-rails"
+gem 'rails-i18n'
+gem 'aws-sdk-s3', require: false
+
