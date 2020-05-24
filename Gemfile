@@ -70,8 +70,5 @@ gem "jquery-ui-rails"
 gem 'rails-i18n'
 gem 'aws-sdk-s3', require: false
 gem 'mini_magick'
+gem 'fog-aws'
 
-group :production do
-  gem 'rails_12factor', '0.0.2'
-  gem 'fog-aws'
-end
