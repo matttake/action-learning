@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_091853) do
     t.string "title", null: false
     t.text "fact"
     t.text "perceive"
-    t.string "image", null: false
+    t.string "image"
     t.string "action"
     t.text "action2"
     t.text "action3"
