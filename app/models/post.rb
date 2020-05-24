@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :title, :publisher, :author, :issu, :page, :hit, :read, presence: true
+  validates :title, :publisher, :author, :issu, :image, :page, :hit, :read, presence: true
   has_one_attached :image
   belongs_to :user,optional:true
   has_many :maxims

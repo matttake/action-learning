@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string "title", null: false
       t.text "fact"
       t.text "perceive"
-      t.string "image"
+      t.string "image",null: false
       t.string "action"
       t.text "action2"
       t.text "action3"
