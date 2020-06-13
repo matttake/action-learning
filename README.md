@@ -1,24 +1,33 @@
-# README
+# Action by the Learning
+  "Action by the Learning" invite learning to an action
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DEMO
+[![Image from Gyazo](https://i.gyazo.com/80d0e0c3bf4587f0570fc35fa3e5a61c.gif)](https://gyazo.com/80d0e0c3bf4587f0570fc35fa3e5a61c)
+# Features
+  "Action by the Learning" can connect to the action without keeping learning intact.
+  "Action by the Learning" can easily look back on a past by viewing.
 
-Things you may want to cover:
+# Requirement
 
-* Ruby version
+* rails  5.2.4.2
+* MySQL 14.14
 
-* System dependencies
+# Installation
 
-* Configuration
 
-* Database creation
+  ```
+  gem install rails 
+  ```
 
-* Database initialization
+  ``` 
+  brew update
+  brew install mysql
+  ```
 
-* How to run the test suite
+# Author
 
-* Services (job queues, cache servers, search engines, etc.)
+* tsukamoto yuuto
+* tech camp
 
-* Deployment instructions
-
-* ...
+# License
+"Action by the Learning" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
