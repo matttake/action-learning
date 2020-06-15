@@ -13,7 +13,6 @@ class PostsController < ApplicationController
   def new
     random
     @post = Post.new
-    @posts = Post.where(user_id: current_user.id)  
   end
   
   def create
@@ -28,18 +27,18 @@ class PostsController < ApplicationController
   
   def show
     random
-    @posts = Post.find(params[:id]) 
+    @post = Post.find(params[:id]) 
     
   end
   
   def edit
     random
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
   
   def update
     random
-    @posts = Post.find(params[:id]) 
+    @post = Post.find(params[:id]) 
     post = Post.find(params[:id])
     post.update(post_params)
     render :show
