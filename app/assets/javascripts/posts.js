@@ -39,3 +39,13 @@ $(document).on('turbolinks:load', function () {
     });
   });
 });
+
+
+// showのドロップダウンメニュー
+$(document).on('turbolinks:load', function(){
+  $('.show__top__dropdwn').hover(function(){
+      $("ul:not(:animated)", this).slideDown();
+  }, function(){
+      $("ul.show__top__dropdwn__menu",this).slideUp();
+  });
+});

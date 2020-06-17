@@ -33,7 +33,13 @@
         %p#table 読了日:
         %p#date= @post.read
       %hr/
-
+    .show__top__dropdwn
+      = icon('fa', 'angle-down', class: 'drop-icon')
+      %ul.show__top__dropdwn__menu
+        %li
+          =link_to("編集","/posts/#{@post.id}/edit",  {class:"btn btn-link",role:"button"})
+        %li
+          %a{:href => "#"} 削除
 
   .show__main.row
     .show__main__container.col-lg-6.col-12
@@ -53,6 +59,3 @@
         %li.list-group-item.mark= @post.action
         %li.list-group-item.mark= @post.action2
         %li.list-group-item.mark= @post.action3
-    .show__main__edit
-      =link_to("Edit","/posts/#{@post.id}/edit",  {class:"btn btn-link",role:"button"})
-  

@@ -187,6 +187,28 @@
         padding-left: 20px;
       }
     }
+    &__dropdwn{
+      position: absolute;
+      right: 13px;
+      padding: 5px;
+      display: block;
+      cursor: pointer;    
+      .drop-icon{
+        width: 70px;
+        padding-left: 10px;
+      }
+      &__menu{
+        width: 100%;
+        display: none;
+        position: absolute;
+        margin: 5px 0px;
+        padding-bottom: 10px;
+        background:white;
+        .btn-link:hover{
+          color: black;
+        }  
+      }
+    }
     hr{
       @include hr;
       margin: 0 50px 15px 160px;
