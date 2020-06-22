@@ -48,6 +48,14 @@ class PostsController < ApplicationController
     random
     @posts = Post.where(user_id: current_user.id)  
   end
+
+  def destroy
+    @post = Post.find(params[:id]) 
+    if @post.destroy
+      redirect_to root_path
+    else
+    end
+  end
   
   private
   def post_params
