@@ -39,7 +39,7 @@
         %li
           =link_to("編集","/posts/#{@post.id}/edit",  {class:"btn btn-link",role:"button"})
         %li
-          %a{:href => "#"} 削除
+          =link_to("削除","/posts/#{@post.id}", {data: {confirm: "削除すると元には戻せません。よろしいでしょうか?"}, method: "delete", class:"btn btn-link",role:"button"})
 
   .show__main.row
     .show__main__container.col-lg-6.col-12
