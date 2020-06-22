@@ -54,6 +54,7 @@ class PostsController < ApplicationController
     if @post.destroy
       redirect_to root_path
     else
+      redirect_to post_path(@post)
     end
   end
   
