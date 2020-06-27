@@ -27,15 +27,19 @@
   top: 0;
   background-image: url("/images/top-image.jpeg");
   height: 100vh;
+  background-color:rgba(255,255,255,0.9);
   p{
     @include header-p;
-    bottom: 55%;
+    top: 30%;
     font-size: 18px;
   }
   &__btn{
-    @include header-p;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);  
     width: 350px;
-    bottom: 20%;
+    top: 50%;
     a{
       margin-bottom: 30px;
     }
@@ -63,6 +67,105 @@
       height: calc(100% + 4px);
       content: "";
     }
+  }
+  &__icon{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);  
+    width: 350px;
+    top: 85%;
+    &__part{
+      position: relative;
+      >i{
+        position: absolute;
+        top: 35px;
+        left: 44%;
+
+      }
+    }
+  }
+}
+.landing-section{
+  text-align: center;
+  background-color: $bg-color;
+  padding: 80px 50px 0;
+  h3{
+    font-size: 18px;
+    font-weight: bold; 
+  }
+  p{
+    margin-bottom: 90px;
+  }
+  hr{
+    @include hr;
+    width: 300px;
+    margin-bottom: 100px;
+    margin-top: 8px;
+  }
+  .line{
+    border-bottom: outset;
+  }
+  
+  &__reason{
+  }
+  &__example{
+    padding-top: 80px;
+    #topic{
+      // background-color: #fff;
+    }
+    &__title{
+      padding-top: 80px;
+    }
+  }
+  &__btn{
+    padding: 0;
+    padding-top: 80px;
+    position: relative;
+    top: 0;
+    // background-color: $bg-color;
+    height: 400px;
+    >h3{
+      font-weight: normal;
+    }
+    &__login{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);  
+      width: 350px;
+      top:45%;
+      // padding-bottom: 100px;
+      a{
+        margin-bottom: 30px;
+      }
+      .aa{
+        position: relative;
+        display: inline-block;
+        padding: 0.4em 1.6em;
+        font-size: 0.8em;
+        color: #868686;
+        text-decoration: none;
+        user-select: none;
+        background: $bg-color;
+        transition: 0.5s;
+      }
+      .aa:hover{
+        color: black;
+        background-image: linear-gradient(to right, #e9e9e9 0%, #c2c2c2 100%);
+      }
+      .aa::before{
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        content: "";
+      }
+    }
+  
+    
   }
 }
 
