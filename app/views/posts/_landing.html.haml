@@ -1,6 +1,57 @@
+-# .landing.container-fluid
+-#   .row
+-#     .landing__message
+-#       %p 知識をスキルに。
+-#     .landing__btn.row
+-#       = link_to "ログイン", new_user_session_path, class: "btn btn-secondary col-12 aa",role:"button"
+-#       = link_to "新規登録", new_user_registration_path, class: "btn btn-secondary col-12 aa",role:"button"
+  
+
+
 .landing.container-fluid
-  .landing__message
-    %p 知識をスキルに。
+  %p 知識をスキルに。
   .landing__btn.row
     = link_to "ログイン", new_user_session_path, class: "btn btn-secondary col-12 aa",role:"button"
     = link_to "新規登録", new_user_registration_path, class: "btn btn-secondary col-12 aa",role:"button"
+  .landing__icon
+    .landing__icon__part
+      %p アプリについて
+      = icon("fas", "angle-double-down",class: "fa-3x")
+  
+    
+.landing-section
+  .landing-section__reason
+    %h3 本は学びの宝庫
+    %hr/
+    %p ただ本を読んで「良かった。」で終わりでは学んだつもりになっただけで身につかない。
+    %p 読むことによって得た知識を、行動に移して初めて読書の本当の価値が生まれる。
+    %p 行動を起こし習慣化することで知識を自分のものに。
+  .landing-section__example
+    %h3#topic 主な機能
+    %hr.line/
+    .landing-section__example__title
+      %h3 登録
+      %hr/
+      %p 読み終えた本の情報を登録しましょう。
+      %p 全てはここから。
+    .landing-section__example__title
+      %h3 TOP
+      %hr/
+      %p 本の情報を登録し、行動に移したいアクションプランがあればトップページに表示されます。
+      %p 常に目に触れることで潜在意識に強く残り、行動を促し習慣に。
+    .landing-section__example__title
+      %h3 一覧
+      %hr/
+      %p 過去の作品の一覧を見ることができます。
+      %p 作品をクリックするとその本の詳細が見ることができます。
+    .landing-section__example__title
+      %h3 フラッシュバック
+      %hr/
+      %p 過去のメモや記録の情報は、日に日に薄れてきて新しい知識が上書きされていく。
+      %p ふとした瞬間に見返すことで思い出し、新たな気付きや閃きを。
+  .landing-section__btn
+    %h3 知識をスキルに。
+    %hr.line/
+    .landing-section__btn__login.row
+      = link_to "ログイン", new_user_session_path, class: "btn btn-secondary col-12 aa",role:"button"
+      = link_to "新規登録", new_user_registration_path, class: "btn btn-secondary col-12 aa",role:"button"
