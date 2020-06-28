@@ -8,9 +8,9 @@
     = form.label :image, class: 'image_label' do
       .prev-contents
         -# 既に登録されている画像があれば表示をさせます
-        - if @post.image.attached?
+        - if @po.image.attached?
           .prev-content
-            = image_tag @post.image, alt: "preview", class: "prev-image"
+            = image_tag @po.image, alt: "preview", class: "prev-image"
             -# 既に登録されている画像がなければiconを表示させます
         -# - else
         -#   = icon('fas', 'image', class: 'photo-icon')

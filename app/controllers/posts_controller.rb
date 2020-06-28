@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: :index
-
+  
   def index
     if current_user.present?
       random    
@@ -12,13 +12,14 @@ class PostsController < ApplicationController
   
   def new
     random
-    @post = Post.new
+    @po = Post.new
+    @post = Post.all
   end
   
   def create
     random
-    @post = Post.new(post_params)
-    if @post.save
+    @po = Post.new(post_params)
+    if @po.save
       render :create
     else
       render :new
