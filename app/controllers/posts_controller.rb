@@ -13,7 +13,9 @@ class PostsController < ApplicationController
   def new
     random
     @po = Post.new
-    @post = Post.all
+    if Post.where(user_id: current_user.id).present?
+      @post = Post.all
+    end
   end
   
   def create
