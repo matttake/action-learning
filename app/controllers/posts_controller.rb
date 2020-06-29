@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     if current_user.present?
       random    
       @posts = Post.where(user_id: current_user.id,indication: 1)  
+      @post = Post.all
     end
     @present = Post.where(indication:1)
     @maxim = Maxim.order("RAND()").first
