@@ -1,6 +1,5 @@
 - if post.errors.any?
   #errors
-    %h3 エラーがあります
     %ul
       - post.errors.full_messages.each do |msg|
         %li= msg

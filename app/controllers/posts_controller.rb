@@ -37,6 +37,7 @@ class PostsController < ApplicationController
   def edit
     random
     @post = Post.find(params[:id])
+    @po = Post.find(params[:id])
   end
   
   def update
@@ -44,7 +45,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id]) 
     post = Post.find(params[:id])
     post.update(post_params)
-    render :show
+    redirect_to post_path(@post)
   end
   
   def list
@@ -63,7 +64,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:title, :image,:fact, :perceive, :action, :action2, :action3,:publisher,:author,:issu,:page,:hit,:read,:indication).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :image, :fact, :perceive, :action, :action2, :action3,:publisher,:author,:issu,:page,:hit,:read,:indication).merge(user_id: current_user.id)
   end
   
   def move_to_index

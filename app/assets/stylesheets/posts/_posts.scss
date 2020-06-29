@@ -237,6 +237,7 @@
   .form{
     @include header;
     background-image: url("/images/list2.jpeg");
+    // position: fixed;
     >p{
     @include header-p;
   }
@@ -248,13 +249,23 @@
     }
     &__element{
       margin-bottom: 30px;
+      &__flex{
+        display: flex;
+        span{
+          font-size: 10px;
+          color: red;
+          line-height: 28px;
+        }
+      }
     }
   }
   #errors{
-    margin:200px 200px 0;
+    margin:0px 200px;
     padding-top: 20px;
     text-align: center;
     border: 2px solid red;
+    position: relative;
+    top: 200px;
   }
 }
 .prev-image{
