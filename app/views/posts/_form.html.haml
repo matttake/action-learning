@@ -1,29 +1,34 @@
 .form__box.row
   .form__box__element.col-12
-    %p タイトル
+    .form__box__element__flex
+      %p タイトル
+      %span (必須)
     = form.text_field :title,class:"col-lg-6 col-12"    
   .form__box__element.col-12
-    %p TOP画像
-    -# ラベルでfile_fieldとicon、プレビュー画像を紐付けます
+    .form__box__element__flex
+      %p TOP画像
+      %span (必須)
     = form.label :image, class: 'image_label' do
       .prev-contents
-        -# 既に登録されている画像があれば表示をさせます
-        - if @post.image.attached?
+        - if @po.image.attached?
           .prev-content
             = image_tag @post.image, alt: "preview", class: "prev-image"
-            -# 既に登録されている画像がなければiconを表示させます
-        -# - else
-        -#   = icon('fas', 'image', class: 'photo-icon')
-      -# file_fieldはdisplay: none;で隠します
       = form.file_field :image, class: 'form-control-file hidden_file'
   .form__box__element.col-12
-    %p 出版社
+    .form__box__element__flex
+      %p 出版社
+      %span (必須)
+
     = form.text_field :publisher,class:"col-lg-6 col-12"
   .form__box__element.col-12
-    %p 著者
+    .form__box__element__flex
+      %p 著者
+      %span (必須)
     = form.text_field :author,class:"col-lg-6 col-12"
   .form__box__element.col-sm-6.col-12
-    %p ページ数
+    .form__box__element__flex
+      %p ページ数
+      %span (必須)
     = form.number_field :page
   .form__box__element.col-sm-6.col-12
     %p 当たり

@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      post: ポスト
+    attributes:
+      post:
+        title: タイトル
+        publisher: 出版社
+        author: 著者
+        page: ページ数
+        image: 画像
