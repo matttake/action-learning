@@ -3,8 +3,8 @@
     .index__maxim
       %p= @maxim.text
       %p= @maxim.name
-  .index__warapper.container-fluid
+  .index__wrapper.container-fluid
     -@posts.each do |post|
-      = render partial:"action",locals:{post:post}
+      = render partial:"action-plan",locals:{post:post}
 - else
   =render "landing"

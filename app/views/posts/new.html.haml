@@ -1,5 +1,5 @@
 .form.container-fluid
   %p 新規登録
   = form_with(model: @po, local:true) do |f|
-    = render partial:"errors", locals:{post:@po}
+    = render partial:"layouts/errors", locals:{post:@po}
     = render partial:"form", locals:{form:f}
