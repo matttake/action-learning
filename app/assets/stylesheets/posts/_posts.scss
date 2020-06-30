@@ -12,12 +12,9 @@
   margin: 0;
   color: rgba(0, 0, 0, 0.5);
 }
-
 .list-group-item{
   height: 50px;
 }
-
-
 
 // LandingSetion
 .landing{
@@ -81,7 +78,6 @@
         position: absolute;
         top: 35px;
         left: 44%;
-
       }
     }
   }
@@ -106,14 +102,8 @@
   .line{
     border-bottom: outset;
   }
-  
-  &__reason{
-  }
   &__example{
     padding-top: 80px;
-    #topic{
-      // background-color: #fff;
-    }
     &__title{
       padding-top: 80px;
     }
@@ -123,7 +113,6 @@
     padding-top: 80px;
     position: relative;
     top: 0;
-    // background-color: $bg-color;
     height: 400px;
     >h3{
       font-weight: normal;
@@ -135,7 +124,6 @@
       -webkit-transform: translateX(-50%);  
       width: 350px;
       top:45%;
-      // padding-bottom: 100px;
       a{
         margin-bottom: 30px;
       }
@@ -164,15 +152,10 @@
         content: "";
       }
     }
-  
-    
   }
 }
 
-
-
 // IndexSetion
-
 .index{
   @include header;
   background-image: url("/images/index.jpeg");
@@ -190,7 +173,6 @@
     }    
     @keyframes show {
       0% {
-        // transform:translate(0,2em);
         opacity:0;
       }
       50% {
@@ -203,7 +185,7 @@
       }
     }
   }
-  &__warapper{
+  &__wrapper{
     @include box;
     background-color: $bg-color;
     padding-bottom: 0;
@@ -231,7 +213,6 @@
     }
   }
 }
-  
   
   // FormSetion
   .form{
@@ -369,7 +350,6 @@
   }
 }
 
-
 // ListSetion
 .list{
   @include header;
@@ -399,7 +379,6 @@
     }
   }
 }
-
 
 .create{
   padding-top: 100px;

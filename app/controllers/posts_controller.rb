@@ -48,11 +48,6 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
   
-  def list
-    random
-    @posts = Post.where(user_id: current_user.id)  
-  end
-
   def destroy
     @post = Post.find(params[:id]) 
     if @post.destroy
@@ -62,6 +57,11 @@ class PostsController < ApplicationController
     end
   end
   
+  def list
+    random
+    @posts = Post.where(user_id: current_user.id)  
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :image, :fact, :perceive, :action, :action2, :action3,:publisher,:author,:issu,:page,:hit,:read,:indication).merge(user_id: current_user.id)
