@@ -10,7 +10,7 @@
       %span (必須)
     = form.label :image, class: 'image_label' do
       .prev-contents
-        - if @po.image.attached?
+        - if @post.image.attached?
           .prev-content
             = image_tag @post.image, alt: "preview", class: "prev-image"
       = form.file_field :image, class: 'form-control-file hidden_file'
@@ -40,7 +40,6 @@
     %p 読了日
     = form.date_select :read,{use_month_numbers: true}
 
-      
   .form__box__element.col-lg-6.col-12
     %p 要約
     = form.text_area :fact,size:"15x15",class:"col-12"

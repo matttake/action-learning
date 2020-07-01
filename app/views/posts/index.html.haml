@@ -4,7 +4,7 @@
       %p= @maxim.text
       %p= @maxim.name
   .index__wrapper.container-fluid
-    -@posts.each do |post|
+    -@posts_action.each do |post|
       = render partial:"action-plan",locals:{post:post}
 - else
   =render "landing"

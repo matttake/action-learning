@@ -10,10 +10,10 @@
           %li.nav-item
             =link_to(post_path(@random.ids), {class:"nav-link"}) do
               フラッシュバック
-        -if @post.present?
-          %li.nav-item
-            =link_to(post_path(@random.ids), {class:"nav-link"}) do
-              フラッシュバック
+        -# -if @post.present?
+        -#   %li.nav-item
+        -#     =link_to(post_path(@random.ids), {class:"nav-link"}) do
+        -#       フラッシュバック
               
         %li.nav-item
           =link_to("一覧","/posts/list", {class:"nav-link"})

@@ -1,27 +1,25 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: :index
+  before_action :random, except: :index
+  before_action :set_posts, except: :index
   
   def index
     if current_user.present?
       random    
-      @posts = Post.where(user_id: current_user.id,indication: 1)  
+      set_posts
+      @posts_action = Post.where(user_id: current_user.id,indication: 1)  
     end
     @present = Post.where(indication:1)
     @maxim = Maxim.order("RAND()").first
   end
   
   def new
-    random
-    @po = Post.new
-    if Post.where(user_id: current_user.id).present?
-      @post = Post.all
-    end
+    @post = Post.new
   end
   
   def create
-    random
-    @po = Post.new(post_params)
-    if @po.save
+    @post = Post.new(post_params)
+    if @post.save
       render :create
     else
       render :new
@@ -29,23 +27,20 @@ class PostsController < ApplicationController
   end
   
   def show
-    random
     @post = Post.find(params[:id]) 
-    
   end
   
   def edit
-    random
     @post = Post.find(params[:id])
-    @po = Post.find(params[:id])
   end
   
   def update
-    random
     @post = Post.find(params[:id]) 
-    post = Post.find(params[:id])
-    post.update(post_params)
-    redirect_to post_path(@post)
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else 
+      render :edit
+    end
   end
   
   def destroy
@@ -58,10 +53,9 @@ class PostsController < ApplicationController
   end
   
   def list
-    random
-    @posts = Post.where(user_id: current_user.id)  
   end
 
+  
   private
   def post_params
     params.require(:post).permit(:title, :image, :fact, :perceive, :action, :action2, :action3,:publisher,:author,:issu,:page,:hit,:read,:indication).merge(user_id: current_user.id)
@@ -70,9 +64,12 @@ class PostsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
-
+  
   def random
     @random = Post.where(user_id: current_user.id).order("RAND()").limit(1)
   end
-
+  
+  def set_posts
+    @posts = Post.where(user_id: current_user.id)  
+  end
 end
